@@ -1,37 +1,119 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/zhangYongtest/zhangYongtest/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/zhangYongtest/zhangYongtest/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>3D播放</title>
+    <link rel="stylesheet" href="">
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        background:url('背景.jpg') no-repeat;
+        background-size:cover;
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            position:absolute;
+            bottom:100px;
+            left:50%;
+            margin-left:-100px;
+            transform-style:preserve-3d;
+            animation:sport 6s linear 0s infinite normal;
+        }
+        ul li{
+            list-style:none;
+            width: 200px;
+            height: 200px;
+            font-size:60px;
+            text-align:center;
+            line-height:200px;
+            position:absolute;
+            left:0px;
+            top:0;
+            background:black;
+        }
+        ul li:nth-child(1){
+            transform:rotateY(60deg)translateZ(200px);
+        }
+        ul li:nth-child(2){
+            transform:rotateY(120deg)translateZ(200px);
+        }
+        ul li:nth-child(3){
+            transform:rotateY(180deg)translateZ(200px);
+        }
+        ul li:nth-child(4){
+            transform:rotateY(240deg)translateZ(200px);
+        }
+        ul li:nth-child(5){
+            transform:rotateY(300deg)translateZ(200px);
+        }
+        ul li:nth-child(6){
+            transform:rotateY(360deg)translateZ(200px);
+        }
+        ul li img{
+             width: 200px;
+            height: 200px;
+            border:5px solid skyblue;
+            box-sizing:border-box;
+            transition:transform 1s;
+        }
+        ul:hover{
+            animation-play-state:paused;
+        }
+        ul:hover li img{
+            opacity:0.5;
+        }
+        ul li:hover img{
+            opacity:1;
+            transform:scale(1.2);
+        }
+        @keyframes sport{
+            from{
+                transform:rotateX(-10deg) rotateY(0deg);
+            }
+            to{
+                transform:rotateX(-10deg)rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+        <a href="http://www.so.com/link?url=http%3A%2F%2Fimage.so.com%2Fi%3Fie%3Dutf-8%26q%3D%25E9%259F%25A9%25E9%259B%25AA%26src%3Dstar_card&amp;q=%E6%98%8E%E6%98%9F%E5%9B%BE%E7%89%87%E5%A5%B3&amp;ts=1533523326&amp;t=bcf6dd79570f40a45421af1f9272e4f" target="_blank">
+        <img src="https://p.ssl.qhimg.com/sdmt/110_110_100/d/_famous_onebox/pic/star/5310067.jpg">
+        </a>
+        </li>
+        <li>
+        <a href="http://www.so.com/link?url=http%3A%2F%2Fimage.so.com%2Fi%3Fie%3Dutf-8%26q%3D%25E5%258F%25A4%25E5%258A%259B%25E5%25A8%259C%25E6%2589%258E%26src%3Dstar_card&amp;q=%E6%98%8E%E6%98%9F%E5%9B%BE%E7%89%87%E5%A5%B3&amp;ts=1533524022&amp;t=b0bff99c8651c53050d30c2dbad6894" target="_blank">
+        <img src="https://ps.ssl.qhimg.com/sdmt/110_110_100/t01bc6fa5edffb59c83.jpg">
+        </a>
+        </li>
+        <li>
+        <a href="http://www.so.com/link?url=http%3A%2F%2Fimage.so.com%2Fi%3Fie%3Dutf-8%26q%3D%25E8%25B5%25B5%25E4%25B8%25BD%25E9%25A2%2596%26src%3Dstar_card&amp;q=%E6%98%8E%E6%98%9F%E5%9B%BE%E7%89%87%E5%A5%B3&amp;ts=1533524274&amp;t=783b9818a635d78add73f73db0fb3c0" target="_blank">
+        <img src="https://p.ssl.qhimg.com/sdmt/110_110_100/d/_famous_onebox/pic/star/723041.jpg">
+        </a>
+        </li>
+        <li>
+        <a href="http://www.so.com/link?url=http%3A%2F%2Fimage.so.com%2Fi%3Fie%3Dutf-8%26q%3D%25E5%2588%2598%25E4%25BA%25A6%25E8%258F%25B2%26src%3Dstar_card&amp;q=%E6%98%8E%E6%98%9F%E5%9B%BE%E7%89%87%E5%A5%B3&amp;ts=1533524274&amp;t=20c63bfba99319e430492f347f46727">
+        <img src="https://p.ssl.qhimg.com/sdmt/110_110_100/d/_famous_onebox/pic/star/3106633.jpg">
+        </a>
+        </li>
+        <li>
+        <a href="http://www.so.com/link?url=http%3A%2F%2Fimage.so.com%2Fi%3Fie%3Dutf-8%26q%3D%25E8%258C%2583%25E5%2586%25B0%25E5%2586%25B0%26src%3Dstar_card&amp;q=%E6%98%8E%E6%98%9F%E5%9B%BE%E7%89%87%E5%A5%B3&amp;ts=1533524274&amp;t=689839993f8d0e6abb46ef18624e4d9" target="_blank" >
+        <img src="https://p.ssl.qhimg.com/sdmt/110_110_100/d/_famous_onebox/pic/star/4769837.jpg">
+        </a>
+        </li>
+        <li>
+        <a href="http://www.so.com/link?url=http%3A%2F%2Fimage.so.com%2Fi%3Fie%3Dutf-8%26q%3D%25E5%2594%2590%25E5%25AB%25A3%26src%3Dstar_card&amp;q=%E6%98%8E%E6%98%9F%E5%9B%BE%E7%89%87%E5%A5%B3&amp;ts=1533524274&amp;t=63a7bd4628a3dd5aae3d748cbd3f91c" target="_blank">
+        <img src="https://ps.ssl.qhmsg.com/sdmt/110_110_100/t01977bb96be33a36bf.jpg">
+        </a>
+        </li>
+    </ul>
+    <audio src=""></audio>
+</body>
+</html>
